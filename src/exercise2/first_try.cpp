@@ -1,6 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <unordered_map>
 
 struct ListNode {
     int val;
@@ -13,7 +11,7 @@ struct ListNode {
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        int carry = 0;  // ½øÎ»Öµ
+        int carry = 0;  // è¿›ä½å€¼
         ListNode* head = nullptr;
         ListNode* tail = nullptr;
         while(l1 != nullptr && l2 != nullptr) {
@@ -42,7 +40,7 @@ public:
             l2 = l2->next;
         }
 
-        // ÓĞÒ»¸öÊı×Ö½áÊøÁË
+        // æœ‰ä¸€ä¸ªæ•°å­—ç»“æŸäº†
         if (l1 == nullptr)
         {
             while (l2 != nullptr)
@@ -83,7 +81,7 @@ public:
                 l1 = l1->next;
             }
         }
-        // nÎ»+nÎ»¿ÉÄÜÎªn+1Î»
+        // nä½+nä½å¯èƒ½ä¸ºn+1ä½
         if (carry == 1)
         {
             ListNode* temp_node = new ListNode(carry);
